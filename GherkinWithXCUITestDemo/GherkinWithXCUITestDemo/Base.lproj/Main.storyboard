@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome Screen View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WelcomeScreenViewController" customModule="GherkinWithXCUITestDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5g-O4-XGG">
+                                <rect key="frame" x="207" y="494" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.11237912063053879" blue="0.13806945282085292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbx-Sx-mZ8">
+                                <rect key="frame" x="188.5" y="526" width="37" height="30"/>
+                                <state key="normal" title="Enter"/>
+                                <connections>
+                                    <action selector="onEnterClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iKZ-ib-WET"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQU-f7-xod">
+                                <rect key="frame" x="207" y="658" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AZf-qI-7OR">
+                                <rect key="frame" x="107" y="433" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="pVU-1o-j18"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zbx-Sx-mZ8" firstAttribute="top" secondItem="i5g-O4-XGG" secondAttribute="bottom" constant="32" id="YiP-a2-pbn"/>
+                            <constraint firstItem="AZf-qI-7OR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oqo-8y-yrZ"/>
+                            <constraint firstItem="i5g-O4-XGG" firstAttribute="centerX" secondItem="AZf-qI-7OR" secondAttribute="centerX" id="tDz-id-wJd"/>
+                            <constraint firstItem="BQU-f7-xod" firstAttribute="centerX" secondItem="Zbx-Sx-mZ8" secondAttribute="centerX" id="wUJ-sJ-s5q"/>
+                            <constraint firstItem="BQU-f7-xod" firstAttribute="top" secondItem="Zbx-Sx-mZ8" secondAttribute="bottom" constant="102" id="wu1-sW-Bqm"/>
+                            <constraint firstItem="Zbx-Sx-mZ8" firstAttribute="centerX" secondItem="i5g-O4-XGG" secondAttribute="centerX" id="xRb-5K-wDL"/>
+                            <constraint firstItem="AZf-qI-7OR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y09-B2-ZLf"/>
+                            <constraint firstItem="i5g-O4-XGG" firstAttribute="top" secondItem="AZf-qI-7OR" secondAttribute="bottom" constant="31" id="ygM-df-gzN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="errorMessage" destination="i5g-O4-XGG" id="chz-4m-X7U"/>
+                        <outlet property="nameField" destination="AZf-qI-7OR" id="s1l-6Z-kl9"/>
+                        <outlet property="welcomeMessage" destination="BQU-f7-xod" id="t1O-TJ-FU7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="111.83035714285714"/>
+        </scene>
+    </scenes>
+</document>
